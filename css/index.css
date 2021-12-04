@@ -13,10 +13,10 @@ a {
 .wheel {
   background-color: var(--secondary);
   position: absolute;
-  left: calc(50vw - (75vw / 2));
-  top: calc(50vh - (75vw / 2));
-  width: 75vw;
-  height: 75vw;
+  left: calc(50vw - (min(75vw, 400px) / 2));
+  top: calc(50vh - (min(75vw, 400px) / 2));
+  width: min(75vw, 400px);
+  height: min(75vw, 400px);
   border-radius: 50%;
   color: #fff;
 }

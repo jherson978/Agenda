@@ -1,5 +1,13 @@
 const CACHE = "app-cache";
-const urlsToCache = ["index.html"];
+const urlsToCache = [
+  "index.html",
+  "acabados.html",
+  "agregar.html",
+  "css/general.css",
+  "css/index.css",
+  "css/acabados.css",
+  "js/index.js",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -9,5 +17,20 @@ self.addEventListener("install", (event) => {
     })
   );
 });
-self.addEventListener("fetch", (event) => {});
+
+self.addEventListener("fetch", (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+      return (
+        r ||
+        fetch(e.request).then((response) => {
+          return caches.open(CACHE).then((cache) => {
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
+    })
+  );
+});
 self.addEventListener("activate", (event) => {});
