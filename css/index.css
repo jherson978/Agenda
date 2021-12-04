@@ -1,0 +1,61 @@
+.rect {
+  background-color: var(--primary);
+  height: 50%;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  color: white;
+}
+
+.wheel {
+  background-color: var(--secondary);
+  position: absolute;
+  left: calc(50vw - (75vw / 2));
+  top: calc(50vh - (75vw / 2));
+  width: 75vw;
+  height: 75vw;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.wheel * {
+  display: inline-block;
+  position: absolute;
+  transform-origin: 50% 50%;
+}
+
+.landscape-msg {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  body {
+    overflow: hidden;
+  }
+  .landscape-msg {
+    display: flex;
+    background-color: var(--primary);
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .landscape-msg-circle {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landscape-msg-circle h2 {
+    text-align: center;
+  }
+}

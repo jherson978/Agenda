@@ -1,0 +1,13 @@
+{
+    "short_name": "Agenda",
+    "name": "Agenda",
+    "icons": [
+        {
+            "src": "/img/blue-splash.png",
+            "type": "image/png",
+            "sizes": "1600x1600"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone"
+}
