@@ -31,36 +31,3 @@ a {
   position: absolute;
   transform-origin: 50% 50%;
 }
-
-.landscape-msg {
-  display: none;
-}
-
-@media (orientation: landscape) {
-  body {
-    overflow: hidden;
-  }
-  .landscape-msg {
-    display: flex;
-    background-color: var(--primary);
-    width: 100vw;
-    height: 100vh;
-    color: #fff;
-    position: fixed;
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-  }
-  .landscape-msg-circle {
-    width: 50vh;
-    height: 50vh;
-    border-radius: 50%;
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .landscape-msg-circle h2 {
-    text-align: center;
-  }
-}

@@ -9,5 +9,6 @@ function save() {
 }
 
 function read() {
-  citas = JSON.parse(localStorage.getItem("citas"));
+  let strRead = localStorage.getItem("citas");
+  if (strRead) citas = JSON.parse();
 }

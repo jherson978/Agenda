@@ -6,7 +6,11 @@ const urlsToCache = [
   "css/general.css",
   "css/index.css",
   "css/acabados.css",
+  "css/agregar.css",
   "js/index.js",
+  "js/acabados.js",
+  "js/agregar.js",
+  "js/citas.js",
 ];
 
 self.addEventListener("install", (event) => {
