@@ -5,6 +5,10 @@
   text-align: center;
   color: #fff;
 }
+.rect i {
+  display: inline-block;
+  margin-top: 24px;
+}
 
 a {
   color: white;
@@ -19,6 +23,7 @@ a {
   height: min(75vw, 400px);
   border-radius: 50%;
   color: #fff;
+  touch-action: none;
 }
 
 .wheel * {
